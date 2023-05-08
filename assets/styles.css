@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+section {
+    max-width: 1280px;
+    margin: 2em auto;
+    border: solid 1px #d0d7de;
+    background: #fff;
+    border-radius: 6px;
+    padding: 1em 4em;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+video {
+    width: 50%;
+    height: auto;
+    background: linear-gradient(0deg, rgba(0,0,0, 0.9), rgba(0,0,0, 0.5));
+    margin: 2em 0;
+}
+
+.group {
+    display: flex;
+    gap: 2em;
+}
+
+button {
+    display: block;
+    font-size: 1.5em;
+    padding: 0.2em 0.5em;
+    margin: .5em 0;
+}
+
+textarea {
+    width: 100%;
+    min-height: 6em;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+}
+
+.instruction {
+    display: none;
+}
