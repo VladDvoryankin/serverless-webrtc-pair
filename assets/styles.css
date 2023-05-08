@@ -53,7 +53,6 @@ textarea {
 @media (max-width: 1024px) {
     section {
         margin: 1em;
-        min-width: 100%;
         padding: 0 1em;
     }
 
@@ -64,5 +63,9 @@ textarea {
     video {
         width: 100%;
         margin: 1em 0;
+    }
+
+    video:nth-child(even) {
+        margin-top: 0;
     }
 }
