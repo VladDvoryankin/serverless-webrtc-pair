@@ -1,5 +1,10 @@
 (function(d, video, button, instruction, text) {
-    const pc = new RTCPeerConnection();
+    const options = {
+        iceServers: [{
+            urls: ['stun:stun1.1.google.com:19302', 'stun:stun2.1.google.com:19302']
+        }]
+    };
+    const pc = new RTCPeerConnection(options);
     
     let localStream, remoteStream;
 
@@ -39,7 +44,17 @@
         }
     };
     const initUI = async () => {
+        const copy = e => {
+            navigator.clipboard.writeText(e.target.value);
+            window.alert('copied to clipboard!');
+        }
+
         d.querySelectorAll(`.${button}`).forEach($el => $el.addEventListener('click', onClick));
+        d.querySelectorAll(`.${text}`).forEach($el => {
+            if ($el.dataset.copy) {
+                $el.addEventListener('click', copy);
+            }
+        });
     };
 
     const initWebRTC = async (target) => {
